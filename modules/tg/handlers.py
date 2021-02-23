@@ -16,9 +16,9 @@ async def cmd_start(m: types.Message):
 {hcode('<url> <max_summary_sentences> <max_summary_words> <language>')}
 
 url - mandatory article url
-max_summary_sentences - optional, defaults to `{hcode('4')}`
-max_summary_words - optional, defaults to `{hcode('100')}`
-language - optional, defaults to `{hcode('en')}`
+max_summary_sentences - optional, defaults to {hcode('4')}
+max_summary_words - optional, defaults to {hcode('100')}
+language - optional, defaults to {hcode('en')}
 
 📝 {hbold('Example')}
 {test_url}
