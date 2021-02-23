@@ -1,0 +1,4 @@
+venv/
+production.env
+.idea
+*.pyc

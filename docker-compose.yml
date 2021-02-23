@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  bot:
+    image: kylmakalle/linkedin-bot:latest
+    restart: always
+    env_file: production.env
+    labels:
+      - com.centurylinklabs.watchtower.enable: 'true'

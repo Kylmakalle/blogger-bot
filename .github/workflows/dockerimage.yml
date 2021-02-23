@@ -1,0 +1,20 @@
+name: Build Docker Image
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build and publish
+      uses: elgohr/Publish-Docker-Github-Action@master
+      with:
+        name: Kylmakalle/linkedin-bot:latest
+        tag: Kylmakalle/linkedin-bot:latest
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
+        snapshot: true
