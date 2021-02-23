@@ -6,4 +6,4 @@ services:
     restart: always
     env_file: production.env
     labels:
-      - com.centurylinklabs.watchtower.enable: 'true'
+      com.centurylinklabs.watchtower.enable: 'true'
