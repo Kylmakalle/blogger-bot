@@ -2,8 +2,12 @@ version: '3'
 
 services:
   bot:
-    image: kylmakalle/linkedin-bot:latest
+    image: ghcr.io/kylmakalle/blogger-bot:latest
     restart: always
-    env_file: production.env
-    labels:
-      com.centurylinklabs.watchtower.enable: 'true'
+    logging:
+      options:
+        max-size: "10M"
+        max-file: "10"
+    environment:
+      BOT_TOKEN: $BOT_TOKEN
+      SENTRY_URL: $SENTRY_URL
